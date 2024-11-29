@@ -31,11 +31,9 @@ int main(int argc, char *argv[]) {
     while ((opt = getopt_long(argc, argv, "upl:e:h", long_options, NULL)) != -1) {
         switch (opt) {
             case 'u':
-                output = (char *)malloc(1024);
                 list_users();
                 break;
             case 'p':
-                output = (char *)malloc(1024);
                 list_processes();
                 break;
             case 'l':
