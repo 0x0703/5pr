@@ -4,7 +4,6 @@
 #include <string.h>
 
 void list_users() {
-    struct passwd *pw;
     FILE *fp = popen("cut -d: -f1,6 /etc/passwd | sort", "r");
     
     if (fp == NULL) {
